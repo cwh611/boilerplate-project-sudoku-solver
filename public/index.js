@@ -34,7 +34,7 @@ document.getElementById("solve-puzzle-btn").addEventListener("click", () => {
   if (!currentPuzzle) {
     return alert("No puzzle to solve")
   }
-  fetch("app.heroku/api/solve", {
+  fetch("https://chunk-sudoku-solver-47890bb073ab.herokuapp.com/api/solve", {
     method: "POST",
     "Content-Type": "application/json",
     body: {puzzle: currentPuzzle}
@@ -54,7 +54,7 @@ document.getElementById("solve-puzzle-btn").addEventListener("click", () => {
 document.getElementById("check-placement-btn").addEventListener("click", () => {
   const coordinate = document.getElementById("coordinate-input").value;
   const value = document.getElementById("value-input").value;
-  fetch("app.heroku/api/check", {
+  fetch("https://chunk-sudoku-solver-47890bb073ab.herokuapp.com/api/check", {
     method: "POST",
     "Content-Type": "application/json",
     body: {
