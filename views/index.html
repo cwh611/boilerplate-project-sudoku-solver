@@ -4,124 +4,151 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sudoku Solver</title>
-    <link rel="stylesheet" href="../public/style.css">
+    <link rel="stylesheet" href="/public/style.css">
   </head>
   <body>
     <header>
       <h3>Sudoku Solver</h3>
     </header>
     <main>
-      <table>
-        <tr class="row" id="row-1">
-          <td id="a-1"><input type="text" id="a-1-input"></td>
-          <td id="a-2"><input type="text" id="a-2-input"></td>
-          <td id="a-3"><input type="text" id="a-3-input"></td>
-          <td id="a-4"><input type="text" id="a-4-input"></td>
-          <td id="a-5"><input type="text" id="a-5-input"></td>
-          <td id="a-6"><input type="text" id="a-6-input"></td>
-          <td id="a-7"><input type="text" id="a-7-input"></td>
-          <td id="a-8"><input type="text" id="a-8-input"></td>
-          <td id="a-9"><input type="text" id="a-9-input"></td>
-        </tr>
-        <tr class="row" id="row-2">
-          <td id="b-1"><input type="text" id="b-1-input"></td>
-          <td id="b-2"><input type="text" id="b-2-input"></td>
-          <td id="b-3"><input type="text" id="b-3-input"></td>
-          <td id="b-4"><input type="text" id="b-4-input"></td>
-          <td id="b-5"><input type="text" id="b-5-input"></td>
-          <td id="b-6"><input type="text" id="b-6-input"></td>
-          <td id="b-7"><input type="text" id="b-7-input"></td>
-          <td id="b-8"><input type="text" id="b-8-input"></td>
-          <td id="b-9"><input type="text" id="b-9-input"></td>
-        </tr>
-        <tr class="row" id="row-3">
-          <td id="c-1"><input type="text" id="c-1-input"></td>
-          <td id="c-2"><input type="text" id="c-2-input"></td>
-          <td id="c-3"><input type="text" id="c-3-input"></td>
-          <td id="c-4"><input type="text" id="c-4-input"></td>
-          <td id="c-5"><input type="text" id="c-5-input"></td>
-          <td id="c-6"><input type="text" id="c-6-input"></td>
-          <td id="c-7"><input type="text" id="c-7-input"></td>
-          <td id="c-8"><input type="text" id="c-8-input"></td>
-          <td id="c-9"><input type="text" id="c-9-input"></td>
-        </tr>
-        <tr class="row" id="row-4">
-          <td id="d-1"><input type="text" id="d-1-input"></td>
-          <td id="d-2"><input type="text" id="d-2-input"></td>
-          <td id="d-3"><input type="text" id="d-3-input"></td>
-          <td id="d-4"><input type="text" id="d-4-input"></td>
-          <td id="d-5"><input type="text" id="d-5-input"></td>
-          <td id="d-6"><input type="text" id="d-6-input"></td>
-          <td id="d-7"><input type="text" id="d-7-input"></td>
-          <td id="d-8"><input type="text" id="d-8-input"></td>
-          <td id="d-9"><input type="text" id="d-9-input"></td>
-        </tr>
-        <tr class="row" id="row-5">
-          <td id="e-1"><input type="text" id="e-1-input"></td>
-          <td id="e-2"><input type="text" id="e-2-input"></td>
-          <td id="e-3"><input type="text" id="e-3-input"></td>
-          <td id="e-4"><input type="text" id="e-4-input"></td>
-          <td id="e-5"><input type="text" id="e-5-input"></td>
-          <td id="e-6"><input type="text" id="e-6-input"></td>
-          <td id="e-7"><input type="text" id="e-7-input"></td>
-          <td id="e-8"><input type="text" id="e-8-input"></td>
-          <td id="e-9"><input type="text" id="e-9-input"></td>
-        </tr>
-        <tr class="row" id="row-6">
-          <td id="f-1"><input type="text" id="f-1-input"></td>
-          <td id="f-2"><input type="text" id="f-2-input"></td>
-          <td id="f-3"><input type="text" id="f-3-input"></td>
-          <td id="f-4"><input type="text" id="f-4-input"></td>
-          <td id="f-5"><input type="text" id="f-5-input"></td>
-          <td id="f-6"><input type="text" id="f-6-input"></td>
-          <td id="f-7"><input type="text" id="f-7-input"></td>
-          <td id="f-8"><input type="text" id="f-8-input"></td>
-          <td id="f-9"><input type="text" id="f-9-input"></td>
-        </tr>
-        <tr class="row" id="row-7">
-          <td id="g-1"><input type="text" id="g-1-input"></td>
-          <td id="g-2"><input type="text" id="g-2-input"></td>
-          <td id="g-3"><input type="text" id="g-3-input"></td>
-          <td id="g-4"><input type="text" id="g-4-input"></td>
-          <td id="g-5"><input type="text" id="g-5-input"></td>
-          <td id="g-6"><input type="text" id="g-6-input"></td>
-          <td id="g-7"><input type="text" id="g-7-input"></td>
-          <td id="g-8"><input type="text" id="g-8-input"></td>
-          <td id="g-9"><input type="text" id="g-9-input"></td>
-        </tr>
-        <tr class="row" id="row-8">
-          <td id="h-1"><input type="text" id="h-1-input"></td>
-          <td id="h-2"><input type="text" id="h-2-input"></td>
-          <td id="h-3"><input type="text" id="h-3-input"></td>
-          <td id="h-4"><input type="text" id="h-4-input"></td>
-          <td id="h-5"><input type="text" id="h-5-input"></td>
-          <td id="h-6"><input type="text" id="h-6-input"></td>
-          <td id="h-7"><input type="text" id="h-7-input"></td>
-          <td id="h-8"><input type="text" id="h-8-input"></td>
-          <td id="h-9"><input type="text" id="h-9-input"></td>
-        </tr>
-        <tr class="row" id="row-9">
-          <td id="i-1"><input type="text" id="i-1-input"></td>
-          <td id="i-2"><input type="text" id="i-2-input"></td>
-          <td id="i-3"><input type="text" id="i-3-input"></td>
-          <td id="i-4"><input type="text" id="i-4-input"></td>
-          <td id="i-5"><input type="text" id="i-5-input"></td>
-          <td id="i-6"><input type="text" id="i-6-input"></td>
-          <td id="i-7"><input type="text" id="i-7-input"></td>
-          <td id="i-8"><input type="text" id="i-8-input"></td>
-          <td id="i-9"><input type="text" id="i-9-input"></td>
-        </tr>
-      </table>
-      <button type="button" id="solve-puzzle-btn">Solve Puzzle</button>
-      <div id="string-container">
-        <label>
-          Or, input a string:
-        </label>
-        <input type="text" id="string-input" placeholder="82..4..6...16..89...98315.749.157.............53..4...96.415..81..7632..3...28.51">
+      <div id="container-1">
+        <button type="button" id="generate-puzzle-btn">Generate Puzzle</button>
+        <table>
+          <tr class="row" id="row-1">
+            <td id="a-1"></td>
+            <td id="a-2"></td>
+            <td id="a-3"></td>
+            <td id="a-4"></td>
+            <td id="a-5"></td>
+            <td id="a-6"></td>
+            <td id="a-7"></td>
+            <td id="a-8"></td>
+            <td id="a-9"></td>
+          </tr>
+          <tr class="row" id="row-2">
+            <td id="b-1"></td>
+            <td id="b-2"></td>
+            <td id="b-3"></td>
+            <td id="b-4"></td>
+            <td id="b-5"></td>
+            <td id="b-6"></td>
+            <td id="b-7"></td>
+            <td id="b-8"></td>
+            <td id="b-9"></td>
+          </tr>
+          <tr class="row" id="row-3">
+            <td id="c-1"></td>
+            <td id="c-2"></td>
+            <td id="c-3"></td>
+            <td id="c-4"></td>
+            <td id="c-5"></td>
+            <td id="c-6"></td>
+            <td id="c-7"></td>
+            <td id="c-8"></td>
+            <td id="c-9"></td>
+          </tr>
+          <tr class="row" id="row-4">
+            <td id="d-1"></td>
+            <td id="d-2"></td>
+            <td id="d-3"></td>
+            <td id="d-4"></td>
+            <td id="d-5"></td>
+            <td id="d-6"></td>
+            <td id="d-7"></td>
+            <td id="d-8"></td>
+            <td id="d-9"></td>
+          </tr>
+          <tr class="row" id="row-5">
+            <td id="e-1"></td>
+            <td id="e-2"></td>
+            <td id="e-3"></td>
+            <td id="e-4"></td>
+            <td id="e-5"></td>
+            <td id="e-6"></td>
+            <td id="e-7"></td>
+            <td id="e-8"></td>
+            <td id="e-9"></td>
+          </tr>
+          <tr class="row" id="row-6">
+            <td id="f-1"></td>
+            <td id="f-2"></td>
+            <td id="f-3"></td>
+            <td id="f-4"></td>
+            <td id="f-5"></td>
+            <td id="f-6"></td>
+            <td id="f-7"></td>
+            <td id="f-8"></td>
+            <td id="f-9"></td>
+          </tr>
+          <tr class="row" id="row-7">
+            <td id="g-1"></td>
+            <td id="g-2"></td>
+            <td id="g-3"></td>
+            <td id="g-4"></td>
+            <td id="g-5"></td>
+            <td id="g-6"></td>
+            <td id="g-7"></td>
+            <td id="g-8"></td>
+            <td id="g-9"></td>
+          </tr>
+          <tr class="row" id="row-8">
+            <td id="h-1"></td>
+            <td id="h-2"></td>
+            <td id="h-3"></td>
+            <td id="h-4"></td>
+            <td id="h-5"></td>
+            <td id="h-6"></td>
+            <td id="h-7"></td>
+            <td id="h-8"></td>
+            <td id="h-9"></td>
+          </tr>
+          <tr class="row" id="row-9">
+            <td id="i-1"></td>
+            <td id="i-2"></td>
+            <td id="i-3"></td>
+            <td id="i-4"></td>
+            <td id="i-5"></td>
+            <td id="i-6"></td>
+            <td id="i-7"></td>
+            <td id="i-8"></td>
+            <td id="i-9"></td>
+          </tr>
+        </table>
+        <button type="button" id="solve-puzzle-btn">Solve Puzzle</button>
       </div>
-      <button type="button" id="solve-string-btn">Solve String</button>
+      <div id="container-2">
+        <div id="string-container">
+          <label for="string-input" id="string-input-label">
+            <strong>
+              Or, input a string:
+            </strong>
+          </label>
+          <input type="text" id="string-input" placeholder="82..4..6...16..89...98315.749.157.............53..4...96.415..81..7632..3...28.51">
+          <button type="button" id="solve-string-btn">Solve String</button>
+        </div>
+        <div id="check-placement-container">
+          <label>
+            <strong>
+              Or, check a placement:
+            </strong>
+          </label>
+          <div id="coordinate-container">
+            <label for="coordinate-input" id="coordinate-label">
+              Coordinate:
+            </label>
+            <input type="text" id="coordinate-input">
+          </div>
+          <div id="value-container">
+            <label for="value-input" id="value-label">
+              Value:
+            </label>
+            <input type="text" id="value-input">
+          </div>
+          <button type="button" id="check-placement-btn">Check</button>
+        </div>
+      </div>
     </main>
-    <script src="../public/client.js">
+    <script src="/public/index.js">
     </script>
   </body>
 </html>
