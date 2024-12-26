@@ -46,7 +46,7 @@ document.getElementById("solve-puzzle-btn").addEventListener("click", () => {
     const { solution } = data;
     console.log("Solution", solution);
     fillGrid(solution);
-    currentPuzzle = "";
+    currentPuzzle = solution;
     })
     .catch(err => {
       alert(err)
