@@ -11,6 +11,7 @@ body {
   width: 100vw;
   display: flex;
   flex-direction: column;
+  align-items: center
 }
 
 header {
@@ -21,14 +22,14 @@ header {
 
 main {
   height: 100%;
-  width: 100%;
+  width: 75%;
   display: flex;
   flex-direction: column; 
 }
 
 #container-1 {
   display: flex;
-  justify-content: space-evenly
+  justify-content: space-between
 }
 
 button {
@@ -74,7 +75,7 @@ td {
 
 #container-2 {
   height: 100%;
-  width: 75%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -99,7 +100,7 @@ label {
 }
 
 #string-input {
-  width: 50%;
+  width: 500px;
   text-align: center
 }
 
@@ -107,6 +108,12 @@ label {
   display: flex;
   width: 100%;
   justify-content: space-between
+}
+
+#check-placement-input-container {
+  display: flex;
+  width: 500px;
+  justify-content: space-between;
 }
 
 #coordinate-container, #value-container {

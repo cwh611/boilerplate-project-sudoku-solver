@@ -70,4 +70,19 @@ document.getElementById("check-placement-btn").addEventListener("click", () => {
       alert(JSON.stringify(data))
     })
 
+});
+
+document.getElementById("solve-string-btn").addEventListener("click", () => {
+  const puzzleString = document.getElementById("string-input").value;
+  fetch("https://chunk-sudoku-solver-47890bb073ab.herokuapp.com/api/solve", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({puzzle: puzzleString})
+  })
+    .then(response => response.json())
+    .then(data => {
+      alert(data)
+    })
 })
