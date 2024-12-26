@@ -36,14 +36,14 @@ document.getElementById("solve-puzzle-btn").addEventListener("click", () => {
   }
   fetch("https://chunk-sudoku-solver-47890bb073ab.herokuapp.com/api/solve", {
     method: "POST",
-    "Content-Type": "application/json",
+    headers: {"Content-Type": "application/json"},
     body: JSON.stringify({puzzle: currentPuzzle})
   })
   .then(response => response.json())
   .then(data => {
-    const { solution } = data.body;
-    console.log("Solution", JSON.stringify(solution))
-    fillGrid(JSON.stringify(solution));
+    const { solution } = data;
+    console.log("Solution", solution);
+    fillGrid(solution);
     currentPuzzle = "";
     })
     .catch(err => {
@@ -56,7 +56,7 @@ document.getElementById("check-placement-btn").addEventListener("click", () => {
   const value = document.getElementById("value-input").value;
   fetch("https://chunk-sudoku-solver-47890bb073ab.herokuapp.com/api/check", {
     method: "POST",
-    "Content-Type": "application/json",
+    headers: {"Content-Type": "application/json"},
     body: JSON.stringify({
       puzzle: currentPuzzle,
       coordinate,
