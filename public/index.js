@@ -15,6 +15,8 @@ const fillGrid = (string) => {
       console.log(`${String.fromCharCode(j + 97)}-${i}`, string[i + (j * 9) - 1]);
       if (string[i + (j * 9) - 1] !== ".") {
         document.getElementById(`${String.fromCharCode(j + 97)}-${i}`).innerText = string[i + (j * 9) - 1];
+      } else {
+        document.getElementById(`${String.fromCharCode(j + 97)}-${i}`).innerText = "";
       }
     }
   }
